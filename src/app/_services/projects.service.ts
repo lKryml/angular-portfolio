@@ -107,4 +107,13 @@ export class ProjectsService {
 
     return project;
   }
+
+  getProjectsByFilter(filterTags: Tag[]) {
+    let filteredProjects: Project[] = [];
+    this.projects.forEach((project) => {
+      let foundALl = true;
+
+      filterTags.forEach((filterTag) => {});
+    });
+  }
 }

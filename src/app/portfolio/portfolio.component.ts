@@ -10,6 +10,7 @@ import { ProjectsService } from '../_services/projects.service';
 })
 export class PortfolioComponent implements OnInit {
   projects = {} as Project[];
+  isCollapsed: boolean = true;
   constructor(
     private titleService: Title,
     private projectService: ProjectsService
