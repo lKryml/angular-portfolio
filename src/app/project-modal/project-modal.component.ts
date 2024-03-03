@@ -8,5 +8,5 @@ import { Project } from '../_models/Project';
 })
 export class ProjectModalComponent {
   project = {} as Project;
-  constructor(private bsModalRef: BsModalRef) {}
+  constructor(public bsModalRef: BsModalRef) {}
 }
