@@ -7,6 +7,13 @@
       >
         Filter
       </button>
+      <button
+        class="btn btn-outline-secondary mb-2"
+        (click)="resetFilter()"
+        [hidden]="!isFiltering"
+      >
+        Reset
+      </button>
     </div>
     <div [collapse]="isCollapsed" [isAnimated]="true">
       <div class="border mb-2 shadow-sm" style="width: 250px">
@@ -19,6 +26,9 @@
                   <input
                     type="checkbox"
                     class="form-check-input position-static me-2"
+                    [(ngModel)]="typescript"
+                    (change)="filterProjects()"
+                    name="Typescript"
                   />
                   <label class="form-check-label small">Typescript</label>
                 </div>
@@ -26,6 +36,18 @@
             </div>
             <div class="col">
               <small><b>Frameworks:</b></small>
+              <div class="form-group">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="angular"
+                    (change)="filterProjects()"
+                    name="Angular"
+                  />
+                  <label class="form-check-label small">Angular</label>
+                </div>
+              </div>
             </div>
           </div>
         </form>

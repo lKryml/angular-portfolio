@@ -111,9 +111,18 @@ export class ProjectsService {
   getProjectsByFilter(filterTags: Tag[]) {
     let filteredProjects: Project[] = [];
     this.projects.forEach((project) => {
-      let foundALl = true;
+      let foundAll = true;
 
-      filterTags.forEach((filterTag) => {});
+      filterTags.forEach((filterTag) => {
+        if (project.tags.includes(filterTag) === false) {
+          foundAll = false;
+        }
+      });
+
+      if (foundAll) {
+        filteredProjects.push(project);
+      }
     });
+    return filteredProjects;
   }
 }
