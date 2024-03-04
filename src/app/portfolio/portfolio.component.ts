@@ -14,6 +14,15 @@ export class PortfolioComponent implements OnInit {
   isCollapsed: boolean = true;
   typescript: boolean = false;
   angular: boolean = false;
+  rxjs: boolean = false;
+  java: boolean = false;
+  js: boolean = false;
+  html: boolean = false;
+  css: boolean = false;
+  sass: boolean = false;
+  react: boolean = false;
+  firebase: boolean = false;
+  htmlcanvas: boolean = false;
   constructor(
     private titleService: Title,
     private projectService: ProjectsService
@@ -33,7 +42,46 @@ export class PortfolioComponent implements OnInit {
     if (this.angular) {
       filterTags.push(Tag.ANGULAR);
     }
-    if (this.typescript || this.angular) {
+    if (this.js) {
+      filterTags.push(Tag.JS);
+    }
+    if (this.java) {
+      filterTags.push(Tag.JAVA);
+    }
+    if (this.react) {
+      filterTags.push(Tag.REACT);
+    }
+    if (this.firebase) {
+      filterTags.push(Tag.FIREBASE);
+    }
+    if (this.css) {
+      filterTags.push(Tag.CSS);
+    }
+    if (this.html) {
+      filterTags.push(Tag.HTML);
+    }
+    if (this.rxjs) {
+      filterTags.push(Tag.RxJS);
+    }
+    if (this.htmlcanvas) {
+      filterTags.push(Tag.HTMLCanvas);
+    }
+    if (this.sass) {
+      filterTags.push(Tag.SASS);
+    }
+    if (
+      this.typescript ||
+      this.angular ||
+      this.js ||
+      this.css ||
+      this.html ||
+      this.htmlcanvas ||
+      this.java ||
+      this.react ||
+      this.rxjs ||
+      this.sass ||
+      this.firebase
+    ) {
       this.isFiltering = true;
     } else {
       this.isFiltering = false;
@@ -44,6 +92,14 @@ export class PortfolioComponent implements OnInit {
   resetFilter() {
     this.typescript = false;
     this.angular = false;
+    this.rxjs = false;
+    this.java = false;
+    this.js = false;
+    this.css = false;
+    this.sass = false;
+    this.react = false;
+    this.firebase = false;
+    this.htmlcanvas = false;
     this.isFiltering = false;
     this.projects = this.projectService.getProjects();
   }

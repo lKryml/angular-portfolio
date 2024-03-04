@@ -32,10 +32,50 @@
                   />
                   <label class="form-check-label small">Typescript</label>
                 </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="java"
+                    (change)="filterProjects()"
+                    name="java"
+                  />
+                  <label class="form-check-label small">Java</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="js"
+                    (change)="filterProjects()"
+                    name="js"
+                  />
+                  <label class="form-check-label small">Javascript</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="sass"
+                    (change)="filterProjects()"
+                    name="sass"
+                  />
+                  <label class="form-check-label small">Sass</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="htmlcanvas"
+                    (change)="filterProjects()"
+                    name="htmlcanvas"
+                  />
+                  <label class="form-check-label small">HTMLCanvas</label>
+                </div>
               </div>
             </div>
             <div class="col">
-              <small><b>Frameworks:</b></small>
+              <small><b>.</b></small>
               <div class="form-group">
                 <div class="form-check">
                   <input
@@ -46,6 +86,56 @@
                     name="Angular"
                   />
                   <label class="form-check-label small">Angular</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="react"
+                    (change)="filterProjects()"
+                    name="react"
+                  />
+                  <label class="form-check-label small">React</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="rxjs"
+                    (change)="filterProjects()"
+                    name="rxjs"
+                  />
+                  <label class="form-check-label small">RxJs</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="firebase"
+                    (change)="filterProjects()"
+                    name="firebase"
+                  />
+                  <label class="form-check-label small">Firebase</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="html"
+                    (change)="filterProjects()"
+                    name="html"
+                  />
+                  <label class="form-check-label small">HTML</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="css"
+                    (change)="filterProjects()"
+                    name="css"
+                  />
+                  <label class="form-check-label small">CSS</label>
                 </div>
               </div>
             </div>
