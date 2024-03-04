@@ -6,6 +6,10 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./resume.component.scss'],
 })
 export class ResumeComponent {
+  isOpenWorkExperience: boolean = false;
+  isOpenEducation: boolean = false;
+  isOpenCertifications: boolean = false;
+  isOpenSkills: boolean = false;
   constructor(private titleService: Title, private renderer: Renderer2) {
     this.titleService.setTitle('Akram Mohammad - Resume');
   }

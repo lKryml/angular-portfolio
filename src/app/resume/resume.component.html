@@ -2,67 +2,89 @@
   <button class="btn btn-primary mb-5 shadow border" (click)="downloadFile()">
     Download PDF Resume
   </button>
-
-  <accordion>
-    <accordion-group heading="Work Experience">
-      <div style="text-align: left">
-        <h2 class="mb-0">Frontend Developer</h2>
-        <h3 class="text-primary">Freelance</h3>
-        <ul>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        </ul>
-      </div>
-      <div style="text-align: left">
-        <h2 class="mb-0">Frontend Developer</h2>
-        <h3 class="text-primary">Freelance</h3>
-        <ul>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        </ul>
-      </div>
-    </accordion-group>
-    <accordion-group heading="Education">
-      <div style="text-align: left">
-        <h2 class="mb-0">Bachelor's of Science in Computer Science</h2>
-        <h3 class="text-primary">Al-Refak University</h3>
-        <ul>
-          <li>Graduated February 2025</li>
-          <li>Graduated with a 75% GPA</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        </ul>
-      </div>
-      <div style="text-align: left">
-        <h2 class="mb-0">Frontend Developer</h2>
-        <h3 class="text-primary">Freelance</h3>
-        <ul>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        </ul>
-      </div>
-    </accordion-group>
-    <accordion-group heading="Certifications">
-      <div style="text-align: left">
-        <h3>MongoDB University</h3>
-        <ul>
-          <li>Graduated February 2025</li>
-          <li>Graduated with a 75% GPA</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        </ul>
-        <h3>MongoDB University</h3>
-        <ul>
-          <li>Graduated February 2025</li>
-          <li>Graduated with a 75% GPA</li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        </ul>
-      </div>
-    </accordion-group>
-    <accordion-group heading="Skills">
-      <div class="row" style="text-align: left">
-        <div class="col">
+  <div class="pb-2">
+    <accordion [isAnimated]="true" class="shadow">
+      <accordion-group [(isOpen)]="isOpenWorkExperience">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        >
+          <div style="visibility: hidden">></div>
+          <div class="btn-link">Work Experience</div>
+          <div style="width: 10.5px">
+            <div *ngIf="!isOpenWorkExperience" style="color: white">></div>
+            <div *ngIf="isOpenWorkExperience" style="color: white">v</div>
+          </div>
+        </button>
+        <div style="text-align: left">
+          <h2 class="mb-0">Frontend Developer</h2>
+          <h3 class="text-primary">Freelance</h3>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+        <div style="text-align: left">
+          <h2 class="mb-0">Frontend Developer</h2>
+          <h3 class="text-primary">Freelance</h3>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isOpenEducation">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        >
+          <div style="visibility: hidden">></div>
+          <div class="btn-link">Education</div>
+          <div style="width: 10.5px">
+            <div *ngIf="!isOpenEducation" style="color: white">></div>
+            <div *ngIf="isOpenEducation" style="color: white">v</div>
+          </div>
+        </button>
+        <div style="text-align: left">
+          <h2 class="mb-0">Bachelor's of Science in Computer Science</h2>
+          <h3 class="text-primary">Al-Refak University</h3>
+          <ul>
+            <li>Graduated February 2025</li>
+            <li>Graduated with a 75% GPA</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+        <div style="text-align: left">
+          <h2 class="mb-0">Frontend Developer</h2>
+          <h3 class="text-primary">Freelance</h3>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isOpenCertifications">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        >
+          <div style="visibility: hidden">></div>
+          <div class="btn-link">Certifications</div>
+          <div style="width: 10.5px">
+            <div *ngIf="!isOpenCertifications" style="color: white">></div>
+            <div *ngIf="isOpenCertifications" style="color: white">v</div>
+          </div>
+        </button>
+        <div style="text-align: left">
+          <h3>MongoDB University</h3>
+          <ul>
+            <li>Graduated February 2025</li>
+            <li>Graduated with a 75% GPA</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
           <h3>MongoDB University</h3>
           <ul>
             <li>Graduated February 2025</li>
@@ -70,23 +92,46 @@
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
           </ul>
         </div>
-        <div class="col">
-          <h3>MongoDB University</h3>
-          <ul>
-            <li>Graduated February 2025</li>
-            <li>Graduated with a 75% GPA</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          </ul>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isOpenSkills">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        >
+          <div style="visibility: hidden">></div>
+          <div class="btn-link">Skills</div>
+          <div style="width: 10.5px">
+            <div *ngIf="!isOpenSkills" style="color: white">></div>
+            <div *ngIf="isOpenSkills" style="color: white">v</div>
+          </div>
+        </button>
+        <div class="row" style="text-align: left">
+          <div class="col">
+            <h3>MongoDB University</h3>
+            <ul>
+              <li>Graduated February 2025</li>
+              <li>Graduated with a 75% GPA</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>MongoDB University</h3>
+            <ul>
+              <li>Graduated February 2025</li>
+              <li>Graduated with a 75% GPA</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>MongoDB University</h3>
+            <ul>
+              <li>Graduated February 2025</li>
+              <li>Graduated with a 75% GPA</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
         </div>
-        <div class="col">
-          <h3>MongoDB University</h3>
-          <ul>
-            <li>Graduated February 2025</li>
-            <li>Graduated with a 75% GPA</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          </ul>
-        </div>
-      </div>
-    </accordion-group>
-  </accordion>
+      </accordion-group>
+    </accordion>
+  </div>
 </div>
